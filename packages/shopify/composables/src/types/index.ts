@@ -1,15 +1,10 @@
 import { UseCategory, UseProduct } from '@vue-storefront/core';
 import { ComputedProperty } from '@vue-storefront/core';
 
-// @todo: replace with real types
+// TODO: replace with real types
+type Product = {}
 
-type Product = {
-
-}
-
-type Category = {
-
-}
+type Category = {}
 
 type User = {
   id?: string;
@@ -21,41 +16,43 @@ type User = {
   token?: string;
   error?: string;
 }
+type UserAddress = {}
 
-type UserAddress = {
-}
-
-// @todo: replace with real Cart types
+// TODO: replace with real Cart types
 type Cart = {
   id?: string;
 }
+type CartItem = {}
+type Coupon = {}
 
-type CartItem = {
-
+type Order = {
+  id: string;
+  createdAt: string;
+  orderState: string;
+  lineItems: [];
+  totalPrice: {
+    centAmount: number;
+  };
 }
-
-type Coupon = {
-
-}
-
-type Order = {}
-
 type OrderItem = {}
-
-type OrderSearchParams = {
-
+enum OrderState {
+  Confirmed = 'Confirmed',
+  Cancelled = 'Cancelled',
+  Complete = 'Complete',
+  Open = 'Open'
 }
+type OrderSearchParams = {}
 
-type ShippingMethod = {
+type ShippingMethod = {}
 
-}
+type WishlistProduct = {}
+type Wishlist = {}
 
-type WishlistProduct = {
-
-}
-
-type Wishlist = {
-
+type LineItem = {
+  productId: string;
+  name: string;
+  id: string;
+  quantity: number;
 }
 
 export interface UseSearch<SEARCH_RESULTS, SEARCH_PARAMS> {
@@ -87,6 +84,8 @@ export {
   Coupon,
   Order,
   OrderItem,
+  OrderState,
+  LineItem,
   OrderSearchParams,
   Product,
   ShippingMethod,

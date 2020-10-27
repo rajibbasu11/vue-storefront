@@ -22,7 +22,7 @@ const params: UseCartFactoryParams<Cart, CartItem, Product, Coupon> = {
       checkoutId: Cookies.get('cart_id') || '',
       id: Cookies.get('cart_id') || ''
     };
-    return await loadCurrentCart(cartParams);
+    return JSON.parse(JSON.stringify(await loadCurrentCart(cartParams)));
   },
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   addToCart: async ({ currentCart, product, quantity }) => {

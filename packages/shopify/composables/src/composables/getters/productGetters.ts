@@ -208,7 +208,9 @@ const productGetters: ProductGetters<ProductVariant, ProductVariantFilters> = {
   getStatus: getProductStatus,
   hasSpecialPrice: checkSpecialPrice,
   isOnWishlist: checkForWishlist,
-  getBreadcrumbs: getBreadcrumbs
+  getBreadcrumbs: getBreadcrumbs,
+  getTotalReviews: null,
+  getAverageRating: null
 };
 
 export default productGetters;

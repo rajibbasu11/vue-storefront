@@ -20,8 +20,8 @@
     "@vue-storefront/nuxt-theme": "0.0.4"
   },
   "devDependencies": {
-    "@vue-storefront/commercetools-theme": "0.1.0",
-    "@vue-storefront/shopify-theme": "0.0.3"
+    "@vue-storefront/commercetools-theme": "^0.1.0",
+    "@vue-storefront/shopify-theme": "^0.0.4"
   },
   "author": "Filip Jędrasik",
   "license": "MIT"

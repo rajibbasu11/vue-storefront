@@ -9,6 +9,7 @@ import useSearch from './composables/useSearch';
 import useUserOrders from './composables/useUserOrders';
 import useContent from './composables/useContent';
 import { useWishlist, setWishlist } from './composables/useWishlist';
+import useUserShipping from './composables/useUserShipping';
 
 import {
   cartGetters,
@@ -16,7 +17,9 @@ import {
   checkoutGetters,
   productGetters,
   userGetters,
-  wishlistGetters
+  wishlistGetters,
+  orderGetters,
+  userShippingGetters
 } from './composables/getters';
 
 export {
@@ -31,11 +34,14 @@ export {
   useContent,
   useSearch,
   useWishlist,
+  useUserShipping,
   setWishlist,
   cartGetters,
   categoryGetters,
   checkoutGetters,
   productGetters,
   userGetters,
-  wishlistGetters
+  wishlistGetters,
+  orderGetters,
+  userShippingGetters
 };

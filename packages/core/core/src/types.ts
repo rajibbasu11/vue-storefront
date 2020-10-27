@@ -261,8 +261,8 @@ export interface ProductGetters<PRODUCT, PRODUCT_FILTER> {
   getCategoryIds: (product: PRODUCT) => string[];
   getId: (product: PRODUCT) => string;
   getFormattedPrice: (price: number) => string;
-  getTotalReviews: (product: PRODUCT) => number;
-  getAverageRating: (product: PRODUCT) => number;
+  getTotalReviews?: (product: PRODUCT) => number;
+  getAverageRating?: (product: PRODUCT) => number;
   getBreadcrumbs?: (product: PRODUCT) => AgnosticBreadcrumb[];
   [getterName: string]: any;
 }
