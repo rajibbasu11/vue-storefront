@@ -71,16 +71,14 @@ describe('[commercetools-getters] product getters', () => {
   });
 
   it('returns cover image', () => {
-    expect(getProductCoverImage({ images: [] } as any)).toEqual(null);
+    expect(getProductCoverImage({ images: [] } as any)).toEqual('');
     expect(getProductCoverImage(product)).toEqual('imageV11/url.jpg');
   });
 
   it('returns master variant', () => {
     const variants = [
-      { _name: 'variant 1',
-        _master: false },
-      { _name: 'variant 2',
-        _master: true }
+      { _name: 'variant 1', _master: false },
+      { _name: 'variant 2', _master: true }
     ];
     expect(getProductFiltered(variants as any, { master: true })).toEqual([{
       _name: 'variant 2',

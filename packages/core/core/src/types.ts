@@ -9,21 +9,19 @@ export type CustomQuery<T = any> = (query: any, variables: T) => {
   variables?: T;
 };
 
-export interface SearchParams {
+export interface ProductSearchParams {
   perPage?: number;
   page?: number;
-  sort?: any;
   term?: any;
-  filters?: any;
   [x: string]: any;
 }
 
-export interface UseProduct<PRODUCT, PRODUCT_FILTERS, SORTING_OPTIONS> {
+export interface UseProduct<PRODUCT> {
   products: ComputedProperty<PRODUCT[]>;
   totalProducts: ComputedProperty<number>;
   loading: ComputedProperty<boolean>;
-  search(params: SearchParams): Promise<void>;
-  search(params: SearchParams, customQuery?: CustomQuery): Promise<void>;
+  search(params: ProductSearchParams): Promise<void>;
+  search(params: ProductSearchParams, customQuery?: CustomQuery): Promise<void>;
   [x: string]: any;
 }
 
